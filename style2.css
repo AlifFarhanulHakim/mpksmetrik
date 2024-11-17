@@ -1,0 +1,358 @@
+:root {
+  --primary: #fff;
+  --bg: #f4f4f4;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: var(--primary);
+  height: 1000px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 7%;
+  background-color: var(--primary);
+  border-bottom: 3px solid #c8c8c8;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo .img {
+  width: 50px;
+  height: 50px;
+  margin-right: 6px;
+}
+
+.navbar .navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-logo p {
+  border-left: 2px solid #cc0001;
+  padding: 4px;
+  font-size: 30px;
+  color: #010101;
+}
+
+.navbar .navbar-item a {
+  color: #010101;
+  font-size: 20px;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.navbar .navbar-item a:hover {
+  color: #cc0001;
+}
+
+.navbar .navbar-item a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #cc0001;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-item a:hover::after {
+  transform: scaleX(0.5);
+}
+
+#hamburger-menu {
+  display: none;
+  color: #010101;
+}
+
+.profil {
+  padding: 1.3rem;
+  text-align: center;
+}
+
+.profil .h3 {
+  margin-top: 80px;
+  color: #010101;
+  font-size: 18px;
+}
+
+.profil .h3 span {
+  color: #cc0001;
+}
+
+.profil .content {
+  margin: 50px;
+  text-align: left;
+  color: #010101;
+  background-image: url(../mpk/img/mpk.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 300px;
+}
+
+.profil .content ul li {
+  font-size: 16px;
+  max-width: 800px;
+}
+
+.profil .content ul p {
+  font-size: 14px;
+  max-width: 800px;
+}
+
+.profil .content ul ol li {
+  margin-left: 45px;
+  font-size: 14px;
+  max-width: 800px;
+}
+
+.Struktur {
+  padding: 1.5rem;
+  margin: 40px;
+}
+
+.Struktur .content {
+  color: #010101;
+  padding: 1rem;
+  font-size: 25px;
+  text-align: left;
+  margin-left: 35px;
+  margin-bottom: 20px;
+}
+
+.Struktur .content h3 {
+  margin-bottom: 20px;
+}
+
+.Struktur .content h3 span {
+  color: #cc0001;
+}
+
+.role {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+  color: #010101;
+}
+
+.title {
+  font-weight: bold;
+  width: 300px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.name {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+/* Kontak */
+.kontak {
+  padding: 2rem;
+  background: #7e7d7d;
+}
+
+.kontak h3 {
+  margin-top: 20px;
+  color: #cc0001;
+  font-size: 20px;
+  text-align: center;
+}
+
+.kontak p {
+  margin: 10px;
+  font-size: 18px;
+  color: #010101;
+  text-align: center;
+}
+
+.kontak span {
+  color: #010101;
+}
+
+.kontak .kontak-content a {
+  display: flex;
+  color: #010101;
+  font-size: 14px;
+  padding: 0.7rem;
+  margin-bottom: 20px;
+  gap: 5px;
+}
+
+.kontak .kontak-content a:hover {
+  color: #cc0001;
+}
+
+.kontak .kontak-content a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #cc0001;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.kontak .kontak-content a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* Footer */
+footer {
+  background-color: #010101;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Media */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .navbar .navbar-logo .img {
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+  }
+
+  .navbar .navbar-logo p {
+    border-left: 2px solid #cc0001;
+    padding: 4px;
+    font-size: 20px;
+    color: #010101;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+    color: #010101;
+  }
+
+  .navbar .navbar-item {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-item.active {
+    right: 0;
+  }
+
+  .navbar .navbar-item a {
+    color: #010101;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-item a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-item a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .profil .content {
+    margin: 50px;
+    text-align: left;
+    color: #010101;
+    background-image: url(../mpk/img/logo\ mpk\ transparan.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+  }
+
+  .kontak .kontak-content .map {
+    width: 80%;
+    height: 80%;
+    margin-bottom: 10px;
+  }
+
+  .Struktur {
+    padding: 1.5rem;
+    margin: 15px;
+  }
+
+  .Struktur .content {
+    color: #010101;
+    padding: 1rem;
+    font-size: 18px;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+
+  .Struktur .content h3 {
+    margin-bottom: 14px;
+  }
+
+  .Struktur .content h3 span {
+    color: #cc0001;
+  }
+
+  .role {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+    color: #010101;
+  }
+
+  .title {
+    font-weight: bold;
+    width: 130px;
+    font-size: 10px;
+    text-decoration: underline;
+  }
+
+  .name {
+    margin-left: 10px;
+    font-size: 10px;
+  }
+
+  .kontak p {
+    font-size: 12px;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
